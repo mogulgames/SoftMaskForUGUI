@@ -99,7 +99,7 @@ namespace Coffee.UISoftMask
                    && AssetDatabase.GetAssetPath(obj) == "Resources/unity_builtin_extra";
         }
 
-
+#if UNITY_EDITOR
         //%%%% Context menu for editor %%%%
         [MenuItem("CONTEXT/Mask/Convert To SoftMask", true)]
         private static bool _ConvertToSoftMask(MenuCommand command)
@@ -124,5 +124,6 @@ namespace Coffee.UISoftMask
         {
             EditorUtils.ConvertTo<Mask>(command.context);
         }
+#endif
     }
 }
