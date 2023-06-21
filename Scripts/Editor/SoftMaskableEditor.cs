@@ -112,7 +112,7 @@ namespace Coffee.UISoftMask
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-
+#if UNITY_EDITOR
             serializedObject.Update();
             DrawMaskInteractions();
 
@@ -133,6 +133,7 @@ namespace Coffee.UISoftMask
             }
 
             GUILayout.EndHorizontal();
+#endif
         }
     }
 }
